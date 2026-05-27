@@ -1,0 +1,59 @@
+ #!/bin/bash
+sum=0
+
+for i in "$@"
+do
+    sum=$(expr $sum + $i)
+done
+
+echo $sum
+0
+u22245092@linux-ex:~$ ls
+26_0317  26_0324  26_0408  git-practice  my_files  poem.txt      timercord    u22245092-3a
+26_0319  26_0330  26_0414  hi            mygit     test_scp.txt  u22245092-2  u22245092-3b
+u22245092@linux-ex:~$ cd git-practice/
+u22245092@linux-ex:~/git-practice$ #!/bin/bash
+sum=0
+
+for i in "$@"
+do
+    sum=$(expr $sum + $i)
+done
+
+echo $sum
+0
+u22245092@linux-ex:~/git-practice$ ./add 1 2 3 4
+-bash: ./add: 그런 파일이나 디렉터리가 없습니다
+u22245092@linux-ex:~/git-practice$ #!/bin/bash
+                                   #!/bin/bash
+echo -n "파일/디렉토리 이름 입력 [enter] "
+echo -n "파일/디렉토리 이름 입력 [enter] "
+read filename
+# 파일이 존재하지 않는 경우
+# 파일이 존재하지 않는 경우en
+if [ ! -e "$filename" ]; then 재하지 않습니다."
+    echo "${filename}은(는) 존재하지 않습니다."
+    exit 1
+fi
+# 파일 유형 판별
+# 파일 유형 판별me" ]; then
+if [ -d "$filename" ]; then
+    type="디렉토리"e" ] || [ -h "$filename" ]; then
+elif [ -L "$filename" ] || [ -h "$filename" ]; then
+    type="심볼릭링크" ]; then
+elif [ -c "$filename" ]; then
+    type="문자장치"e" ]; then
+elif [ -b "$filename" ]; then
+    type="블록장치"e" ]; then
+elif [ -p "$filename" ]; then
+    type="파이프"ame" ]; then
+elif [ -S "$filename" ]; then
+    type="소켓"ename" ]; then
+elif [ -f "$filename" ]; then
+    type="보통파일"
+elsetype="알 수 없는 유형"
+    type="알 수 없는 유형"
+fi
+echo "${filename}은(는) ${type} 입니다."
+echo "${filename}은(는) ${type} 입니다."
+파일/디렉토리 이름 입력
